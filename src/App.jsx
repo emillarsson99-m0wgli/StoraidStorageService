@@ -6,6 +6,7 @@ import Brands from './Components/Brands'
 import OurServices from './Components/OurServices'
 import Testimonials from './Components/Testimonials'
 import WhyChooseUs from './Components/WhyChooseUs'
+import PricingPlan from './Components/PricingPlan'
 
 
 
@@ -21,6 +22,7 @@ function App() {
       <OurServices />
       <Testimonials />
       <WhyChooseUs />
+      <PricingPlan />
     </>
   )
 }

@@ -10,6 +10,8 @@ import './Components/Brands.css'
 import './Components/OurServices.css'
 import './Components/Testimonials.css'
 import './Components/WhyChooseUs.css'
+import './Components/PriceList.css'
+import './Components/PricingPlan.css'
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(

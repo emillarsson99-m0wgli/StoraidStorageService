@@ -1,4 +1,4 @@
-import Button from "./Buttons"
+import Button from "./Button"
 
 function PriceList({ Text, Price, Unit }) {
 
