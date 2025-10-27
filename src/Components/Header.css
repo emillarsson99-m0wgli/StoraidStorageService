@@ -1,0 +1,73 @@
+a:visited {
+  color: inherit;
+}
+
+.header-top-bg {
+  background-color: #12372A;
+}
+.header-contact {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2.5rem;
+}
+
+.call-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  
+  & p {
+    color: #fff;
+  }
+}
+
+.mail-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+
+  & p {
+    color: #fff;
+  }
+}
+
+.contact-icons {
+  width: 18px;
+  height: auto;
+}
+
+.header-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-top{
+  padding: 0 2.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.header-nav {
+    color: #12372A;
+    display: flex;
+    gap: 2rem;
+    font-weight: 600;
+}
+
+.header-nav a {
+    text-decoration: none;
+
+}
