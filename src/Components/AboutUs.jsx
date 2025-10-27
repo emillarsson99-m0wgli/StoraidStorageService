@@ -1,4 +1,6 @@
 import Button from "./Button"
+import Tiles from "./Tiles"
+
 function AboutUs() {
 
     return(
@@ -15,17 +17,11 @@ function AboutUs() {
                     <h3>Providing a Safe Space for Your Treasured Items</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl sed dui lacinia gravida. Nulla quis nulla leo. Mauris ac blandit nisi, non sodales augue. Phasellus eget elit gravida.</p>
                 </div>
+                
                 <div className="about-us-components">
-                    <div id="vision">
-                        <h3>Vision</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusan tium doloremque laudantium.</p>
-                    </div>
-                    <div id="mission">
-                        <h3>Mission</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusan tium doloremque laudantium.</p>
-                    </div>
+                    <Tiles Title="Vision" Text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusan tium doloremque laudantium."  />
+                    <Tiles Title="Mission" Text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusan tium doloremque laudantium." />
                 </div>
-
                 
 
                 <div className="about-us-contact-container">

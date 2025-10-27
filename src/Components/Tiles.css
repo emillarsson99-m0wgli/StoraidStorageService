@@ -1,0 +1,16 @@
+.tiles-component {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    color: #12372A;
+}
+
+.tiles {
+    border: 2px solid #ECECEC;
+    border-radius: 10px;
+    padding: 1rem;
+
+    &:hover {
+        border: 2px solid #F1C30C;
+    }
+}

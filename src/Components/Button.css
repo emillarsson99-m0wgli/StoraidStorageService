@@ -6,4 +6,9 @@
   height: 45px;
   border-radius: 5px;
   font-weight: 700;
+
+  &:hover {
+    background-color: #12372A;
+    color: #fff;
+  }
 }

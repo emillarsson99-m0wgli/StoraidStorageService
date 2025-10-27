@@ -37,20 +37,6 @@
     display: flex;
     gap: 1rem;
     padding: .5rem 0;
-
-    #vision {
-        border: 2px solid #ECECEC;
-        border-radius: 10px;
-        padding: 1rem;
-        color: #12372A;
-    }
-
-    #mission {
-        border: 2px solid #ECECEC;
-        border-radius: 10px;
-        padding: 1rem;
-        color: #12372A;
-    }
 }
 
 .about-us-contact-container {
