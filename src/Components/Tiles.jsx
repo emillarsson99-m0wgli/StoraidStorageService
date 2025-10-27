@@ -1,9 +1,9 @@
 
 
-function Tiles({ Title, Text }) {
+function Tiles({ Title, Text, className }) {
   return (
     <div className="tiles-component">
-        <div className="tiles">
+        <div className={`tiles ${className}`}>
             <h3 className="tiles-title">{Title}</h3>
             <p className="tiles-text">{Text}</p>
         </div>
