@@ -1,0 +1,41 @@
+.why-choose-us-bg {
+    background-color: #FAF8EC;
+}
+
+.wcu-container {
+    display: flex;
+    width: 100%;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5rem 1rem;
+    gap: 3rem;
+}
+
+.wcu-left-text {
+
+    & h3 {
+        color: #F1C30C;
+        font-size: 1.5rem;
+    }
+    & h2 {
+        color: #12372A;
+        font-size: 3.5rem;
+    }
+}
+
+.wcu-left-bottom {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2em;
+    padding: .5rem 0;
+}
+
+.wcu-right {
+    padding: 2.5rem 0;
+}
+
+.wcu-right-text {
+    padding-bottom: 5rem;
+}
