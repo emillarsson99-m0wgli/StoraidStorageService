@@ -8,6 +8,7 @@ import './Components/AboutUs.css'
 import './Components/Tiles.css'
 import './Components/Brands.css'
 import './Components/OurServices.css'
+import './Components/Testimonials.css'
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
