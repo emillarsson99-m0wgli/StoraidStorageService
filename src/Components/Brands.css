@@ -1,0 +1,15 @@
+.brands-container{
+  display: flex;
+  justify-content: center;
+}
+.brands {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem .5rem;
+  width: 100%;
+  max-width: 1320px;
+}
+
+.brands-bg {
+  background-color: #FAF8EC;
+}

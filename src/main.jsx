@@ -6,6 +6,7 @@ import './Components/Button.css'
 import './Components/Hero.css'
 import './Components/AboutUs.css'
 import './Components/Tiles.css'
+import './Components/Brands.css'
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
