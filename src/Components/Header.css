@@ -4,6 +4,7 @@ a:visited {
 
 .header-top-bg {
   background-color: #12372A;
+  padding: .5rem 0;
 }
 .header-contact {
   display: flex;

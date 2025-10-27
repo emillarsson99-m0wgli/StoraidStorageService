@@ -1,0 +1,38 @@
+.hero-bg {
+    background-color: #12372A;
+}
+.hero-container {
+    padding-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    max-width: 735px;
+    
+    & h4 {
+        font-size: 1.5rem;
+        color: #F1C30C;
+    }
+
+    & h1 {
+        font-size: 80px;
+        font-weight: 800;
+    }
+
+    & p {
+        color: #fff;
+    }
+}
+
+.hero-button {
+    padding: 1rem 0;
+    
+    & Button {
+        font-weight: 600;
+    }
+}
