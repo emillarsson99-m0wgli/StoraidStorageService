@@ -1,0 +1,26 @@
+.blog-and-news-container {
+    width: 100%;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5rem 1rem;
+}
+
+.blog-and-news-headline  {
+    display: flex;
+    flex-direction: row;
+    align-items:last baseline;
+}
+.headline {
+    flex-direction: column;
+}
+.headline h3 {
+    color: #F1C30C;
+    font-size: 1.5rem;
+}
+
+.headline h2 {
+    font-size: 3rem;
+    padding: 1rem 0;
+    color: #12372A;
+}
