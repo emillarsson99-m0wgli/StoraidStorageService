@@ -1,0 +1,27 @@
+.booking-bg {
+    background-color: hwb(159 7% 78% / 0.8);
+}
+
+.booking-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5rem 1rem;
+
+    & h2 {
+        padding-bottom: 1rem;
+        font-size: 3rem;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    & p {
+        color: #fff;
+        padding-bottom: 1rem;
+    }
+}

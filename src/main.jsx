@@ -12,6 +12,7 @@ import './Components/Testimonials.css'
 import './Components/WhyChooseUs.css'
 import './Components/PriceList.css'
 import './Components/PricingPlan.css'
+import './Components/Booking.css'
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
