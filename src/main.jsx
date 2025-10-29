@@ -15,6 +15,9 @@ import './Components/PricingPlan.css'
 import './Components/Booking.css'
 import './Components/BlogAndNews.css'
 import './Components/BlogPost.css'
+import './Components/Footer.css'
+import './Components/InputForm.css'
+
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(

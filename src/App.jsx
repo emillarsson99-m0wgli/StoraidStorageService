@@ -9,6 +9,8 @@ import WhyChooseUs from './Components/WhyChooseUs'
 import PricingPlan from './Components/PricingPlan'
 import Booking from './Components/Booking'
 import BlogAndNews from './Components/BlogAndNews'
+import Footer from './Components/Footer'
+
 
 
 
@@ -27,6 +29,7 @@ function App() {
       <PricingPlan />
       <Booking />
       <BlogAndNews />
+      <Footer />
     </>
   )
 }

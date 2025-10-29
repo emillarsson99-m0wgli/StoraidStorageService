@@ -1,0 +1,10 @@
+.input-form {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.input {
+  border: none;
+  padding: 1rem;
+  width: 400px;
+}
