@@ -1,36 +1,24 @@
-import { useState } from 'react'
-import Header from './Components/Header'
-import Hero from './Components/Hero'
-import AboutUs from './Components/AboutUs'
-import Brands from './Components/Brands'
-import OurServices from './Components/OurServices'
-import Testimonials from './Components/Testimonials'
-import WhyChooseUs from './Components/WhyChooseUs'
-import PricingPlan from './Components/PricingPlan'
-import Booking from './Components/Booking'
-import BlogAndNews from './Components/BlogAndNews'
-import Footer from './Components/Footer'
-import InputForm from './Components/InputForm'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
-
+import HomePage from './Pages/HomePage'
+import Footer from "./Components/Footer"
+import Header from "./Components/Header"
+import OurServices from "./Components/OurServices"
 
 
 function App() {
 
   return (
-    <>
+    <BrowserRouter>
       <Header />
-      <Hero />
-      <AboutUs />
-      <Brands />
+      <main>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </main>
       <OurServices />
-      <Testimonials />
-      <WhyChooseUs />
-      <PricingPlan />
-      <Booking />
-      <BlogAndNews />
       <Footer />
-    </>
+    </BrowserRouter>
   )
 }
 

@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom"
 import Button from "./Button"
 
 function Header() {
@@ -39,12 +40,12 @@ function Header() {
             
             <div className="header-main">
                 <img src="/StoraidIcon.svg" alt="Storaid" />
-                <div className="header-nav">
-                    <a href="#">Home</a>
-                    <a href="#">About Us</a>
-                    <a href="#">Services</a>
-                    <a href="#">Contact Us</a>
-                </div>
+                <nav className="header-nav">
+                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/AboutUsPage">About Us</NavLink>
+                    <NavLink to="/ServicesPage">Services</NavLink>
+                    <NavLink to="/ContactPage">Contact Us</NavLink>
+                </nav>
                 <Button Text="Book Now" />
             </div>
             
