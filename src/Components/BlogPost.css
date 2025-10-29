@@ -20,15 +20,6 @@
         color: #fff;
         padding-bottom: 1rem;
     }
-
-    &:hover {
-        background-color: #F1FFEA;
-    }
-
-    &:hover p, h3 {
-        color: #12372A;
-    }
-
 }
 
 .blog-img-placeholder {
