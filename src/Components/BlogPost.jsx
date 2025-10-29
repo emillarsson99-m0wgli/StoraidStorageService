@@ -1,9 +1,18 @@
+import calendar from '/calendar.svg'
+import calendarHovered from '/calendarDark.svg'
+import { useState } from 'react'
+
 function BlogPost() {
+  const [isHovered, setIsHovered] = useState(false)
+
   return (
-    <div className="blog-post">
+    <div className="blog-post"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
         <div className="blog-img-placeholder">Placeholder</div>
         <div className="date">
-            <img src="/calendar.svg" alt="" className="calendar-img"/>
+            <img src={isHovered ? calendarHovered : calendar} alt="" className="calendar-img"/>
             <p>August 17, 2025</p>
         </div>
         <h3>Safe and Secure: The Importance of Choosing the Right Storage</h3>
