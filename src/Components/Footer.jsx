@@ -22,8 +22,14 @@ function Footer() {
             <div className="footer">
               <p>© 2025 StorAid, All rights reserved.</p>
               <div className="terms-and-policy">
-                <p>Terms & Conditions</p>
-                <p> Privacy Policy</p>
+                <div className="terms">
+                    <img src="/arrowIcon.svg" alt="" className="arrow-icon" />
+                    <p>Terms & Conditions</p>
+                </div>
+                <div className="policy">
+                    <img src="/arrowIcon.svg" alt="" className="arrow-icon" />
+                    <p> Privacy Policy</p>
+                </div>
               </div>
             </div>
           </div>
