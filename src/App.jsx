@@ -4,6 +4,7 @@ import HomePage from './Pages/HomePage'
 import Footer from "./Components/Footer"
 import Header from "./Components/Header"
 import OurServices from "./Components/OurServices"
+import AboutUsPage from "./Pages/AboutUsPage"
 
 
 function App() {
@@ -14,9 +15,9 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/AboutUsPage" element={<AboutUsPage />} />
         </Routes>
       </main>
-      <OurServices />
       <Footer />
     </BrowserRouter>
   )
