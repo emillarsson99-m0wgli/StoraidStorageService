@@ -10,7 +10,7 @@ import PricingPlan from './Components/PricingPlan'
 import Booking from './Components/Booking'
 import BlogAndNews from './Components/BlogAndNews'
 import Footer from './Components/Footer'
-
+import InputForm from './Components/InputForm'
 
 
 
