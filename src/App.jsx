@@ -5,6 +5,7 @@ import Footer from "./Components/Footer"
 import Header from "./Components/Header"
 import OurServices from "./Components/OurServices"
 import AboutUsPage from "./Pages/AboutUsPage"
+import ServicePage from "./Pages/ServicePage"
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/AboutUsPage" element={<AboutUsPage />} />
+          <Route path="/ServicePage" element={<ServicePage />} />
         </Routes>
       </main>
       <Footer />

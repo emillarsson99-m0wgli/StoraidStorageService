@@ -43,7 +43,7 @@ function Header() {
                 <nav className="header-nav">
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="/AboutUsPage">About Us</NavLink>
-                    <NavLink to="/ServicesPage">Services</NavLink>
+                    <NavLink to="/ServicePage">Services</NavLink>
                     <NavLink to="/ContactPage">Contact Us</NavLink>
                 </nav>
                 <Button Text="Book Now" />
