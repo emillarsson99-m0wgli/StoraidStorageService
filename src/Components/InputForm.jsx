@@ -4,7 +4,7 @@ function InputForm() {
   return (
     <div className="input-form">
         <input className="input" type="text" />
-        <form  className="form" action="POST" placeholder="Enter your email"></form>
+        <form  className="form" action="POST" placeholder="Your name"></form>
         <div className="newsletter-btn">
             <Button Text="Submit"/>
         </div>
