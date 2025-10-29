@@ -1,3 +1,5 @@
+import BlogPost from "./BlogPost"
+
 function BlogAndNews() {
   return (
     <div className="blog-and-news-container">
@@ -10,7 +12,13 @@ function BlogAndNews() {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl sed dui lacinia gravida. Nulla quis nulla leo. Mauris ac blandit nisi non sodales augue. Phasellus eget elit gravida.</p>
         </div>
 
-        
+        <div className="blog-posts">
+            <BlogPost />
+            <BlogPost />
+            <BlogPost />
+
+
+        </div>
             
         
 
