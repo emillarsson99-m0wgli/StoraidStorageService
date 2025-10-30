@@ -23,13 +23,13 @@
         padding-bottom: 1rem;
     }
 
-    &:hover {
+    &:hover .blog-post, p, h3 {
         background-color: #F1FFEA;
+        color: #12372A;
+        transition: 0.3ms ease-in-out;
     }
 
-    &:hover p, h3 {
-        color: #12372A;
-    }
+    
 
 }
 
