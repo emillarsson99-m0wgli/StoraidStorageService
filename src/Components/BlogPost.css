@@ -24,15 +24,6 @@
             color: #12372A;
         }
     }
-
-    &:hover .blog-post, p, h3 {
-        background-color: #F1FFEA;
-        color: #12372A;
-        transition: 0.3ms ease-in-out;
-    }
-
-    
-
 }
 
 .blog-img-placeholder {
