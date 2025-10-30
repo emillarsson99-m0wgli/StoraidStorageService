@@ -16,13 +16,15 @@
         color: #fff;
         padding-bottom: 1rem;
     }
-   
-    &:hover {
-        background-color: #F1FFEA;
+    & p {
+        color: #fff;
+        padding-bottom: 1rem;
+    }
 
-        h3, p {
-            color: #12372A;
-        }
+    &:hover .blog-post, p, h3 {
+        background-color: #F1FFEA;
+        color: #12372A;
+        transition: 0.3ms ease-in-out;
     }
 }
 
