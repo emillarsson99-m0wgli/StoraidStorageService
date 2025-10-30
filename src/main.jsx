@@ -18,7 +18,8 @@ import './Components/BlogPost.css'
 import './Components/Footer.css'
 import './Components/InputForm.css'
 import './Components/TitleCard.css'
-
+import './Components/Accordion.css'
+import './Components/FAQ.css'
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(

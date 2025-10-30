@@ -1,0 +1,27 @@
+.FAQ-container {
+    display: flex;
+    width: 100%;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5rem 1rem;
+}
+
+.FAQ-headline {
+    width: 650px;
+
+    & h3 {
+        font-size: 1.5rem;
+        color: #F1C30C;
+    }
+
+    & h2 {
+        font-size: 3rem;
+        color: #12372A;
+    }
+
+    & p {
+        color: #12372A;
+    }
+}
+
