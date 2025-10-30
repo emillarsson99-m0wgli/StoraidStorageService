@@ -16,9 +16,13 @@
         color: #fff;
         padding-bottom: 1rem;
     }
-    & p {
-        color: #fff;
-        padding-bottom: 1rem;
+   
+    &:hover {
+        background-color: #F1FFEA;
+
+        h3, p {
+            color: #12372A;
+        }
     }
 }
 
