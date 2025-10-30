@@ -8,27 +8,27 @@ function Accordion() {
         {
             id: "1",
             question: "Can I access my stored iterns anytime?",
-            answer: ""
+            answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
         },
         {
             id: "2",
             question: "Do you offer climate-controlled storage units?",
-            answer: ""
+            answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
         },
         {
             id: "3",
             question: "How long can I rent a storage unit?",
-            answer: ""
+            answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
         },
         {
             id: "4",
             question: "Can I change the size of my storage unit if I need more space?",
-            answer: ""
+            answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
         },
         {
             id: "5",
             question: "How do I pay for my storage unit?",
-            answer: ""
+            answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
         }
     ]
 
