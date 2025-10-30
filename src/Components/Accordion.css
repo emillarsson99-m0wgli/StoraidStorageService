@@ -1,0 +1,107 @@
+.accordion {
+    background-color: var(--faq-box-mobile);
+    position: relative;
+    cursor: pointer;
+    border: 1px solid var(--faq-box-border);
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &.active {
+        border-bottom: none;
+
+        .accordion-icon-circle {
+            background-color: var(--faq-arrow-open-bg);
+        }
+        
+        .accordion-icon {
+            transform: rotate(225deg);
+            width: 8px;
+            height: 8px;
+            border:2px solid var(--faq-arrow-open);
+            border-top: none;
+            border-left: none;
+        }
+        
+        &.active + .accordion-content {
+            display: block;
+        }
+        
+        .accordion-content {
+            display: block;
+        }
+
+        + .accordion-content {
+            display: block;
+        }
+    }
+
+    .accordion-question {
+        font-size:1rem;
+        width: 100%;
+        max-width:300px;
+        font-weight: 600;
+        margin-left: 20px;
+    }
+    .accordion-icon-circle {
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        background-color: var(--faq-arrow-bg);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .accordion-icon {
+        width: 8px;
+        height: 8px;
+        border:2px solid var(--faq-arrow);
+        border-top: none;
+        border-left: none;
+        transform: rotate(45deg)
+    }
+}
+
+.accordion-content {
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-top: none;
+    border: 1px solid var(--faq-box-border);
+    background-color: var(--faq-box-mobile);
+    display: none;
+    color: var(--faq-text);
+    z-index: 1;
+}
+.accordion-content.active{
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    box-shadow: inherit;
+}
+
+.accordion-answer {
+    margin: 0;
+    font-size: 14px;
+    padding: 0;
+    margin: 10px;
+    cursor: pointer;
+    transition: back;
+}
+
+.accordion-answer p {
+    margin: 0;
+    padding: 1rem;
+}
+
+
+
+
+
