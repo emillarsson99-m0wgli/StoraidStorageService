@@ -38,13 +38,18 @@
         font-size: 1.2rem;
         font-weight: 700;
     }
-
     
     .price-amount {
         color: #F1C30C;
         font-size: 3rem;
         padding-bottom: 2rem;
         font-weight: 700;
+    }
+
+    .dollar-icon {
+        position: relative;
+        bottom: 20px;
+        right: 5px;
     }
 
 }

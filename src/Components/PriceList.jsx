@@ -14,8 +14,10 @@ function PriceList({ Text, Price, Unit }) {
             onMouseLeave={() => setIsHovered(false)}
         >
             <div className="pricing-plan-prices">
+                
                 <div className="unit">{Unit}</div>
                 <div className="price">
+                    <img src="/dollarIcon.svg" alt="" className="dollar-icon" />
                     <div className="price-amount">{Price}</div>
                     <div className="price-text">{Text}</div>
                 </div>
