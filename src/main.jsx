@@ -22,6 +22,7 @@ import './Components/Accordion.css'
 import './Components/FAQ.css'
 import './Components/GetInTouch.css'
 import './Components/ContactForm.css'
+import './Components/FindUs.css'
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
