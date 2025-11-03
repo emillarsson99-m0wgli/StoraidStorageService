@@ -1,21 +1,7 @@
-import { useState, useEffect } from 'react'
+
 
 const TestimonialsComponent = ({item}) => {
 
-
-    const [testimonials, setTestimonials] = useState([])
-
-    const fetchData = async () => {
-    const res = await fetch('https://win25-jsf-assignment.azurewebsites.net/api/testimonials')
-    const data = await res.json()
-    setBlogPost(data)
-  }
-
-  useEffect (() => {
-
-    fetchData()
-
-  }, []) 
 
   return (
     <div className="testimonials-box">
@@ -27,12 +13,14 @@ const TestimonialsComponent = ({item}) => {
                 <img src="/StarIcon.svg" alt="" />
                 <img src="/StarIcon.svg" alt="" />
             </div>
-            <div>
+            <div className="testimonials-comment">
                 <p>{item.comment}</p>
             </div>
             
             <div className="testimonials-person">
-                <img src={item.avatarURL} alt="" />
+                <div className="testimonials-image">
+                    <img src={item.avatarUrl} alt="" />
+                </div>
                 <div className="testimonials-person-text">
                     <h5>{item.name}</h5>
                     <p>{item.companyName}</p>

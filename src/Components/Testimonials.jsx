@@ -1,6 +1,22 @@
 import TestimonialsComponent from "./TestimonialsComponent"
+import { useState, useEffect } from 'react'
 
 function Testimonials() {
+
+
+    const [testimonials, setTestimonials] = useState([])
+
+    const fetchData = async () => {
+    const res = await fetch('https://win25-jsf-assignment.azurewebsites.net/api/testimonials')
+    const data = await res.json()
+    setTestimonials(data)
+  }
+
+  useEffect (() => {
+
+    fetchData()
+
+  }, []) 
 
     return(
         <div className="testimonials-bg">
@@ -15,11 +31,9 @@ function Testimonials() {
 
                     <div className="testimonials-boxes">
 
-                        <TestimonialsComponent />
-
-                        <TestimonialsComponent />
-                        
-                        <TestimonialsComponent />
+                        {
+                            testimonials.map((item) => (<TestimonialsComponent key={item.id} item={item} />))
+                        }
                         
                     </div>
                 </div>
