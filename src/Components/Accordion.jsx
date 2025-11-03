@@ -1,37 +1,23 @@
-import { useState} from 'react'
+import { useState, useEffect} from 'react'
 
 function Accordion() {
 
     const [activeValue, setActiveValue] = useState(null)
 
-    const accordionItems = [
-        {
-            id: "1",
-            question: "Can I access my stored iterns anytime?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-        },
-        {
-            id: "2",
-            question: "Do you offer climate-controlled storage units?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-        },
-        {
-            id: "3",
-            question: "How long can I rent a storage unit?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-        },
-        {
-            id: "4",
-            question: "Can I change the size of my storage unit if I need more space?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-        },
-        {
-            id: "5",
-            question: "How do I pay for my storage unit?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-        }
-    ]
+    const [accordion, setAccordion] = useState([])
 
+    const fetchData = async () => {
+    const res = await fetch('https://win25-jsf-assignment.azurewebsites.net/api/faqs')
+    const data = await res.json()
+    setAccordion(data)
+  }
+
+  useEffect (() => {
+
+    fetchData()
+
+  }, []) 
+    
     const toggleAccordion = (id) => {
         setActiveValue(activeValue === id ? null : id) 
     }
@@ -40,13 +26,13 @@ function Accordion() {
     <div>
         <article className="accordion">
             <div className="accordion-list">
-                {accordionItems.map((item) => (
+                {accordion.map((item) => (
                     <div key={item.id}>
                         <div
                             className={`accordion-item ${activeValue === item.id ? 'active' : ''}`}
                             onClick={() => toggleAccordion(item.id)}
                         >
-                            <span className="accordion-question">{item.question}</span>
+                            <span className="accordion-question">{item.title}</span>
                             <div className="accordion-icon-circle">
                                 <div className="accordion-icon"></div>
                             </div>
@@ -54,7 +40,7 @@ function Accordion() {
 
                         <div className={`accordion-content ${activeValue === item.id ? 'active' : ''}`}>
                             <div className="accordion-answer">
-                                <p>{item.answer}</p>
+                                <p>{item.description}</p>
                             </div>
                         </div>
                     </div>
