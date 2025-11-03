@@ -1,6 +1,22 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
 
-function TestimonialsComponent() {
+const TestimonialsComponent = ({item}) => {
+
+
+    const [testimonials, setTestimonials] = useState([])
+
+    const fetchData = async () => {
+    const res = await fetch('https://win25-jsf-assignment.azurewebsites.net/api/testimonials')
+    const data = await res.json()
+    setBlogPost(data)
+  }
+
+  useEffect (() => {
+
+    fetchData()
+
+  }, []) 
+
   return (
     <div className="testimonials-box">
         <div className="testimonials-box-content">
@@ -11,13 +27,15 @@ function TestimonialsComponent() {
                 <img src="/StarIcon.svg" alt="" />
                 <img src="/StarIcon.svg" alt="" />
             </div>
-            <p>Sit pretium aliquam tempor, orci dolor sed maecenas rutrum sagittis. Laoreet posuere rhoncus, egestas lacus, egestas justo aliquam vel. Nisi vitae lectus hac hendrerit. Montes justo turpis sit amet.</p>
+            <div>
+                <p>{item.comment}</p>
+            </div>
             
             <div className="testimonials-person">
-                <p className="img-placeholder">Placeholder</p>
+                <img src={item.avatarURL} alt="" />
                 <div className="testimonials-person-text">
-                    <h5>Celvin Gabriel</h5>
-                    <p>Customer</p>
+                    <h5>{item.name}</h5>
+                    <p>{item.companyName}</p>
                 </div>
                 <div className="testimonials-quote">
                     <img src="/quoteIcon.svg" alt="" className="quote-icon" />
