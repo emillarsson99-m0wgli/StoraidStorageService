@@ -9,7 +9,6 @@ a:visited {
 .header-contact {
   display: flex;
   justify-content: flex-start;
-  gap: 2.5rem;
 }
 
 .call-us {
@@ -17,6 +16,7 @@ a:visited {
   justify-content: center;
   align-items: center;
   gap: .5rem;
+  width: 200px;
   
   & p {
     color: #fff;
@@ -27,6 +27,7 @@ a:visited {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 200px;
   gap: .5rem;
 
   & p {

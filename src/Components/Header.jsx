@@ -13,7 +13,7 @@ function Header() {
                             <p>+46 8 123 122 44</p>
                         </div>
                         <div className="mail-us">
-                            <img src="/MailIcon.svg" alt="" className="contact-icons" />
+                            <img src="/headerMailIcon.svg" alt="" className="contact-icons" />
                             <p>contact@domain.com</p>
                         </div>
                     </div>

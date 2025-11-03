@@ -1,0 +1,33 @@
+.get-in-touch-container {
+    display: flex;
+    gap: 5rem;
+    width: 100%;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5rem 1rem;
+
+    
+}
+
+.get-in-touch-headline h4 {
+    color: #F1C30C;
+    font-size: 1.5rem;
+}
+
+.get-in-touch-headline h3, p {
+    color: #12372A;
+    width: 650px;
+}
+
+.get-in-touch-headline h3 {
+    font-size: 3rem;
+}
+
+.get-in-touch-placeholder {
+    border: 2px solid grey;
+    background-color: grey;
+    width: 665px;
+    height: 370px;
+    margin-top: 2rem;
+}
