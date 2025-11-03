@@ -1,6 +1,23 @@
 import BlogPost from "./BlogPost"
-
+import React, { useState, useEffect } from 'react'
 function BlogAndNews() {
+
+  const [blogPost, setBlogPost] = useState([])
+
+  const fetchData = async () => {
+    const res = await fetch('https://win25-jsf-assignment.azurewebsites.net/api/blogs')
+    const data = await res.json()
+    setBlogPost(data)
+  }
+
+  useEffect (() => {
+
+    fetchData()
+
+  }, []) 
+
+
+
   return (
     <div className="blog-and-news-container">
 
@@ -13,10 +30,9 @@ function BlogAndNews() {
         </div>
 
         <div className="blog-posts">
-            <BlogPost />
-            <BlogPost />
-            <BlogPost />
-
+            {
+              blogPost.map((post) => (<BlogPost key={post.id} post={post} />))
+            }
 
         </div>
             
