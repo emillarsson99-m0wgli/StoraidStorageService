@@ -83,7 +83,8 @@
 .accordion-answer p {
     margin: 0;
     padding: 1rem;
-    color: #12372A; 
+    max-width: 690px;
+    color: #12372A;
 }
 
 
