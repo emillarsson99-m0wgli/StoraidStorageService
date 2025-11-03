@@ -10,7 +10,9 @@ const BlogPost = ({post}) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-        <div className="blog-img-placeholder">{post.imageUrl}</div>
+        <div className="blog-img-placeholder">
+          <img src={post.imageUrl} alt="" />
+        </div>
         <div className="date">
             <img src={isHovered ? calendarHovered : calendar} alt="" className="calendar-img"/>
             <div className="created-text">
