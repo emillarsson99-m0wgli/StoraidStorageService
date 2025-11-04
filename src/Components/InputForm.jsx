@@ -1,6 +1,6 @@
 import Button from "./Button"
 
-function InputForm( Text, shownText, placeholder, name, className ) {
+function InputForm({ Text, shownText, placeholder, name, className }) {
   return (
 
     <div className="input-form">
