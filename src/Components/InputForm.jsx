@@ -7,9 +7,11 @@ function InputForm({ Text, shownText, placeholder, name, className }) {
 
       <form action="">
         <label className={`label ${className}`}  htmlFor={Text}>{shownText}</label>
-        <input className={`input ${className}`} type="text" placeholder={placeholder} name={name} />
-        <div>
-          <Button Text="Submit" />
+        <div className="form-row">
+          <input className={`input ${className}`} type="text" placeholder={placeholder} name={name} />
+          <div className="input-from-btn">
+            <Button Text="Submit" className="form-btn" />
+          </div>
         </div>
       </form>
 
