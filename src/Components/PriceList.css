@@ -71,5 +71,8 @@
     color: #12372A;
 }
 
-
+.pricelist-hovered {
+    background-color: #ECECEC;
+    color: #12372A;
+}
 
