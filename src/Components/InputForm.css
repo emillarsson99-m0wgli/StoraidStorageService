@@ -4,7 +4,10 @@
   gap: .5rem;
 }
 .input {
-  border: none;
-  padding: 1rem;
+  border: 1px solid #F1C30C;
+  border-radius: 5px;
+  padding: .8rem;
   width: 400px;
+
 }
+
