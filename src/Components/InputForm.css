@@ -11,3 +11,12 @@
 
 }
 
+.form-row {
+  display: flex;
+  gap: 1rem
+}
+
+.form-btn {
+  min-width: 100px
+}
+
