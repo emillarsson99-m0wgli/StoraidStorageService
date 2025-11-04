@@ -1,7 +1,7 @@
-function Button({ Text }) {
+function Button({ Text, className }) {
 
     return(
-        <button className="btn">
+        <button className={`btn ${className || ''}`}>
             {Text}
         </button>
     )
