@@ -1,7 +1,9 @@
 import Button from "./Buttons"
+import { useState } from 'react'
 
 function PriceList({ Text, Price, Unit }) {
 
+    const [isHovered, setIsHovered] = useState(false)
     return(
         <div className="prices-box">
             <div className="pricing-plan-prices">
@@ -36,8 +38,8 @@ function PriceList({ Text, Price, Unit }) {
                 </div>
                 
             </div>                               
-            <div className="subscribe-button">
-                <Button Text="Rent Now" />
+            <div >
+                <Button className={`price-list-btn ${isHovered ? 'pricelist-hovered' : ''}`} Text="Rent Now" />
                     
             </div>
         </div>
