@@ -71,8 +71,11 @@
     color: #12372A;
 }
 
-.pricelist-hovered {
+
+.subscribe-button button:hover {
     background-color: #ECECEC;
     color: #12372A;
+    transition: 0.3s ease-in-out;
 }
+
 
