@@ -4,9 +4,14 @@ import { useState } from 'react'
 
 const BlogPost = ({post}) => {
   const [isHovered, setIsHovered] = useState(false)
+  
+  // isExpanded functionen är genererad med ai
+
+  const [isExpanded, setIsExpanded] = useState(false)
+
 
   return (
-    <div className="blog-post"
+    <div className={`blog-post ${isExpanded ? 'expanded-post' : ''}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -22,11 +27,16 @@ const BlogPost = ({post}) => {
         <div className="blog-title">
           <h3>{post.title}</h3>
         </div>
-        <div className="blog-description">
+        <div className={`blog-description ${isExpanded ? 'expanded' : 'truncated'}`}>
           <p>{post.description}</p>
         </div>
         <div className="read-more">
-        <a href="#">Read More →</a>
+        <a href="#" onClick={(e) => {
+          e.preventDefault()
+          setIsExpanded(!isExpanded)
+        }}>
+          {isExpanded ? 'Read Less ↑' : 'Read More →'}
+          </a>
         </div>
     </div>
   )

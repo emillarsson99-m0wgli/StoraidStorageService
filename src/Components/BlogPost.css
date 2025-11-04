@@ -51,9 +51,32 @@
 
 .read-more {
     color: #F1C30C;
-    padding: 1rem 0;
+    padding: .5rem 0;
 
     & a {
         text-decoration: none;
     }
+}
+
+/* Denna delen är genererad  */
+.blog-description {
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+}
+
+.blog-description.truncated {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    
+}
+
+.blog-description.expanded {
+    display: block;
+}
+
+.blog-post.expanded-post {
+    height: auto;
+    min-height: 560px;
 }
