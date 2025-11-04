@@ -48,7 +48,8 @@ function PriceList({ Text, Price, Unit }) {
                 
             </div>                               
             <div className="subscribe-button">
-                <Button Text="Rent Now" />
+                <Button className={`price-list-btn ${isHovered ? 'pricelist-hovered' : ''}`} Text="Rent Now" />
+                    
                     
             </div>
         </div>
