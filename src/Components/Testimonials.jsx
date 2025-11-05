@@ -1,7 +1,7 @@
 import TestimonialsComponent from "./TestimonialsComponent"
 import { useState, useEffect } from 'react'
 
-function Testimonials() {
+function Testimonials({ className }) {
 
 
     const [testimonials, setTestimonials] = useState([])
@@ -19,7 +19,7 @@ function Testimonials() {
   }, []) 
 
     return(
-        <div className="testimonials-bg">
+        <div className={`testimonials-bg ${className}`}>
             
         
                 <div className="testimonials-container">
