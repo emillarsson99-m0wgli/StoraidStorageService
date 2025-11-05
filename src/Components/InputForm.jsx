@@ -1,5 +1,3 @@
-import Button from "./Button"
-
 function InputForm({ Text, shownText, placeholder, name, labelclassName, inputclassName, inputName, labelName }) {
   return (
 
@@ -9,9 +7,6 @@ function InputForm({ Text, shownText, placeholder, name, labelclassName, inputcl
         <label className={`label ${labelclassName}`}  htmlFor={Text}>{shownText} name={labelName}</label>
         <div className="form-row">
           <input className={`input ${inputclassName}`} type="text" placeholder={placeholder} name={inputName} />
-          <div>
-            <Button Text="Submit" />
-          </div>
         </div>
       </form>
 
