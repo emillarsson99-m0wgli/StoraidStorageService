@@ -10,7 +10,7 @@ function AboutUsPage() {
         <TitleCard Title="About Us" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo." />
         <AboutUs />
         <Brands />
-        <Testimonials />
+        <Testimonials className="testimonials-aboutUsPage" />
         <WhyChooseUs className="WCU-about-us" />
     </div>
   )

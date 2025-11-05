@@ -20,7 +20,7 @@ const HomePage = () => {
         <AboutUs />
         <Brands />
         <OurServices />
-        <Testimonials />
+        <Testimonials className="testimonials-homepage" />
         <WhyChooseUs className="WCU-homePage" />
         <PricingPlan />
         <Booking />

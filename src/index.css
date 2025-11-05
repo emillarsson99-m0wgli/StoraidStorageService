@@ -14,3 +14,11 @@
 .WCU-about-us {
   background-color: #fff;
 }
+
+.testimonials-homepage {
+  background-image: linear-gradient(#12372ad0), url('/TestimonialsBG.svg');
+}
+
+.testimonials-aboutUsPage, .testimonials-servicePage {
+  background-color: #12372ad0;
+}

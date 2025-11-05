@@ -9,7 +9,7 @@ function ServicePage() {
     <div>
         <TitleCard Title="Services" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo." />
         <OurServices />
-        <Testimonials />
+        <Testimonials className="testimonials-servicePage" />
         <FAQ />
         <Booking />
     </div>
