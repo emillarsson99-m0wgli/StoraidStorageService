@@ -2,6 +2,8 @@ import { useState, useEffect} from 'react'
 
 function Accordion() {
 
+    // Har tagit stor hjälp av AI för att skapa accordion som fungerar som den ska
+    
     const [activeValue, setActiveValue] = useState(null)
 
     const [accordion, setAccordion] = useState([])
