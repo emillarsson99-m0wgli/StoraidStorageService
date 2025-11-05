@@ -1,14 +1,17 @@
-import Button from "./Button"
-
-function InputForm() {
+function InputForm({ Text, shownText, placeholder, name, labelclassName, inputclassName, inputName, labelName, className }) {
   return (
-    <div className="input-form">
-        <input className="input" type="text" />
-        <form  className="form" action="POST" placeholder="Your name"></form>
-        <div className="newsletter-btn">
-            <Button Text="Submit"/>
+
+    <div className={`input-form ${className}`}>
+
+      <form action="">
+        <label className={`label ${labelclassName}`}  htmlFor={Text} name={labelName} > {shownText} </label>
+        <div className="form-row">
+          <input className={`input ${inputclassName}`} type="text" placeholder={placeholder} name={inputName} />
         </div>
+      </form>
+
     </div>
+
   )
 }
 
