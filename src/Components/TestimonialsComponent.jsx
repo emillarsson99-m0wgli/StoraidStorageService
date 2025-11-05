@@ -7,11 +7,12 @@ const TestimonialsComponent = ({item}) => {
     <div className="testimonials-box">
         <div className="testimonials-box-content">
             <div className="star-rating">
+                <p>{item.rating}/5</p>
+                <img src="/StarIcon.svg" alt="" />
+                {/* <img src="/StarIcon.svg" alt="" />
                 <img src="/StarIcon.svg" alt="" />
                 <img src="/StarIcon.svg" alt="" />
-                <img src="/StarIcon.svg" alt="" />
-                <img src="/StarIcon.svg" alt="" />
-                <img src="/StarIcon.svg" alt="" />
+                <img src="/StarIcon.svg" alt="" /> */}
             </div>
             <div className="testimonials-comment">
                 <p>{item.comment}</p>
