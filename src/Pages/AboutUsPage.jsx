@@ -11,7 +11,7 @@ function AboutUsPage() {
         <AboutUs />
         <Brands />
         <Testimonials />
-        <WhyChooseUs />
+        <WhyChooseUs className="WCU-about-us" />
     </div>
   )
 }

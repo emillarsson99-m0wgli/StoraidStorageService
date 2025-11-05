@@ -21,7 +21,7 @@ const HomePage = () => {
         <Brands />
         <OurServices />
         <Testimonials />
-        <WhyChooseUs />
+        <WhyChooseUs className="WCU-homePage" />
         <PricingPlan />
         <Booking />
         <BlogAndNews />
