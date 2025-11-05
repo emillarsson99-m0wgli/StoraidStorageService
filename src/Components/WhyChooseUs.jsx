@@ -1,7 +1,7 @@
-function WhyChooseUs() {
+function WhyChooseUs({ className }) {
 
     return(
-        <div className="why-choose-us-bg">
+        <div className={`whyChooseUsBG ${className}`}>
             <div className="wcu-container">
                 <div className="wcu-left-text">
                     <div className="wcu-left-top">
