@@ -4,41 +4,71 @@
     height: 640px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; 
     padding: 2rem;
+    gap: 1rem; 
 }
 
-input {
+.input-group {
     display: flex;
-    border-radius: 5px;
-    margin: 1rem;
-    width: 615px;
-    height: 60px;
-    padding: .5rem;
+    flex-direction: column; 
+    align-items: flex-start;
+    width: 100%;
+    gap: 0.5rem; 
 }
 
-#email {
+.contact-row-form {
     display: flex;
-    border-radius: 5px;
-    width: 290px;
-}
-
-#telephone {
-    display: flex;
-    border-radius: 5px;
-    margin: 1rem;
-    width: 290px;
-}
-
-#comments-questions {
-    height: 150px;
+    flex-direction: row;
+    gap: 1rem; 
+    width: 100%;
 }
 
 .contact-row {
     display: flex;
+    flex-direction: column; 
+    gap: 0.5rem; 
 }
 
-.form-btn {
-    position: relative;
-    right: 243px;
+.input-group p {
+    margin-left: .5rem;
 }
+
+.contact-form {
+    width: 100%; 
+    padding: 0.5rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-button {
+    padding: 1.2rem .5rem;
+}
+
+#email {
+    width: 278px;
+}
+
+#telephone {
+    width: 278px;
+}
+
+#name  {
+    width: 590px;
+}
+
+#subject {
+    width: 590px;
+}
+
+#comments-or-questions {
+    width: 600px;
+    margin-left: .5rem;
+    border: 1px solid #F1C30C;
+    border-radius: 5px;
+    padding: .8rem;
+    width: 590px;
+    height: 150px;
+    resize: none;
+}
+

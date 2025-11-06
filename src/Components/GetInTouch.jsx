@@ -8,7 +8,8 @@ function GetInTouch() {
             <h4>Get in Touch</h4>
             <h3>Get Personalized Assistance – Contact Us</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo</p>
-            <p className="get-in-touch-placeholder">Placeholder</p>
+            <img className="contact-fox" src="./ContactFox.jpg" alt="" />
+            {/* Bilden är ai genererad med gemini */}
         </div>
         <div className="get-in-touch-form">
             <ContactForm />

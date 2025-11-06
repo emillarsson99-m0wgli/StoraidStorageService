@@ -3,16 +3,11 @@
   align-items: center;
   gap: .5rem;
 }
+
 .input {
   border: 1px solid #F1C30C;
   border-radius: 5px;
   padding: .8rem;
   width: 400px;
-
-}
-
-.form-row {
-  display: flex;
-  gap: 1rem;
 }
 
