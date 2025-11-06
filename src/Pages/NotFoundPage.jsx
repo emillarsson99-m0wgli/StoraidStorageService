@@ -1,8 +1,10 @@
-import React from 'react'
+import PageNotFound from '../Components/PageNotFound'
 
 function NotFoundPage() {
   return (
     <div>
+      
+      <PageNotFound />
       
     </div>
   )

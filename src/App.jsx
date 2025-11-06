@@ -6,6 +6,7 @@ import Header from "./Components/Header"
 import AboutUsPage from "./Pages/AboutUsPage"
 import ServicePage from "./Pages/ServicePage"
 import ContactPage from "./Pages/ContactPage"
+import NotFoundPage from "./Pages/NotFoundPage"
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/AboutUsPage" element={<AboutUsPage />} />
           <Route path="/ServicePage" element={<ServicePage />} />
           <Route path="/ContactPage" element={<ContactPage />} />
+          <Route path="/NotFoundPage" element={<NotFoundPage />} />
         </Routes>
       </main>
       <Footer />

@@ -1,4 +1,4 @@
-function Button({ Text, className }) {
+function Button({ Text, className, to }) {
 
     return(
         <button className={`btn ${className}`}>
