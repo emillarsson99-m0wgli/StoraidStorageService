@@ -1,3 +1,4 @@
+
 function StarRating({ rating }) {
     // Genererad med youtube och ai
     // https://www.youtube.com/watch?v=eDw46GYAIDQ
@@ -7,7 +8,7 @@ function StarRating({ rating }) {
         {[...Array(totalStars)].map((_, i) => {
             const starValue = i + 1;
             return (
-                <img className="star-icon" key={i} src={rating >= starValue ? "/starIcon.svg" : null} />
+                <img className="star-icon" key={i} src={rating >= starValue ? "/star-solid-full.svg" : "/star-regular-full.svg"} />
             );
         })}
     </div>
