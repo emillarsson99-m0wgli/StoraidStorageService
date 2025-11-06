@@ -1,13 +1,13 @@
-function InputForm({ Text, shownText, placeholder, name, labelclassName, inputclassName, inputName, labelName, className }) {
+function InputForm({ Text, shownText, placeholder, name, labelclassName, inputclassName, inputName, labelName, className, id }) {
   return (
 
     <div className={`input-form ${className}`}>
 
-      <form action="">
+      <form action="POST">
         <label className={`label ${labelclassName}`}  htmlFor={Text} name={labelName} > {shownText} 
-        <div className="form-row">
-          <input className={`input ${inputclassName}`} type="text" placeholder={placeholder} name={inputName} />
-        </div>
+        
+          <input className={`input ${inputclassName}`} type="text" placeholder={placeholder} name={inputName} id={id} />
+        
         </label>
       </form>
 

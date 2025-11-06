@@ -1,7 +1,7 @@
 function Button({ Text, className }) {
 
     return(
-        <button className={`btn ${className || ''}`}>
+        <button className={`btn ${className}`}>
             {Text}
         </button>
     )
