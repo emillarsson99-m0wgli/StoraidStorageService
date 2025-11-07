@@ -72,7 +72,7 @@
 }
 
 
-.subscribe-button button:hover {
+.price-list-btn:hover {
     background-color: #ECECEC;
     color: #12372A;
     transition: 0.3s ease-in-out;
