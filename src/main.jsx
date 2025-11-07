@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import App from './App.jsx'
 import './index.css'
 import './Components/header.css'
 import './Components/Button.css'
@@ -24,22 +25,6 @@ import './Components/GetInTouch.css'
 import './Components/ContactForm.css'
 import './Components/FindUs.css'
 import './Components/PageNotFound.css'
-import App from './App.jsx'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import './Components/StarRating.css'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
