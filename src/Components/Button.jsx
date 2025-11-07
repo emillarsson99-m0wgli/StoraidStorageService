@@ -1,9 +1,11 @@
-function Button({ Text, className }) {
+import { NavLink } from "react-router-dom"
+
+function Button({ Text, className, to }) {
 
     return(
-        <button className={`btn ${className || ''}`}>
+        <NavLink to={to} className={`btn ${className}`}>
             {Text}
-        </button>
+        </NavLink>
     )
 }
 export default Button
