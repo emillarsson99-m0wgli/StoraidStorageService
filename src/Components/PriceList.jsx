@@ -48,7 +48,7 @@ function PriceList({ Text, Price, Unit }) {
                 
             </div>                               
             <div className="subscribe-button">
-                <Button Text="Rent Now" />
+                <Button Text="Rent Now" to="/NotFoundPage" />
                     
                     
             </div>
