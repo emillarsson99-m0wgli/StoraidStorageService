@@ -1,4 +1,8 @@
 .star-icon {
     color: #12372A;
-    background-color: #12372A;
+    
+}
+
+.fa-regular.star-icon {
+    color: #959595;
 }
