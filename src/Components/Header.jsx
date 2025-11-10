@@ -46,7 +46,7 @@ function Header() {
                     <NavLink to="/ServicePage">Services</NavLink>
                     <NavLink to="/ContactPage">Contact Us</NavLink>
                 </nav>
-                <Button Text="Book Now" />
+                <Button Text="Book Now" className="header-btn" to="/BookingPage"/>
             </div>
             
         </div>
