@@ -1,5 +1,5 @@
 import Buttons from "./Button"
-import InputForm from "./InputForm"
+import NewsletterInput from "./NewsletterInput"
 
 function Footer() {
   return (
@@ -13,7 +13,7 @@ function Footer() {
               <h2>Subscribe Our Newsletter</h2>
               <p>Subscribe to our newsletter to receive early discount offers, updates and info</p>
             </div>
-            <InputForm />
+            <NewsletterInput />
           </div>
         </div>
 

@@ -17,6 +17,7 @@ import './Components/BlogAndNews.css'
 import './Components/BlogPost.css'
 import './Components/Footer.css'
 import './Components/InputForm.css'
+import './Components/NewsLetterInput.css'
 
 import App from './App.jsx'
 
