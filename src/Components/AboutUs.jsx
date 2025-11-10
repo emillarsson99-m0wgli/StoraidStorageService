@@ -29,7 +29,7 @@ function AboutUs() {
                 
 
                 <div className="about-us-contact-container">
-                    <Button Text="Discover more" to="/AboutUsPage" />
+                    <Button Text="Discover more" to="/AboutUsPage" className="about-us-btn" />
                     <div className="about-us-contact">
                         <img src="./AboutUsPhone.svg" alt="about us phone" />
                         <div className="About-us-info">
