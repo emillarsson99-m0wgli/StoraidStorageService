@@ -49,3 +49,8 @@
     color: red;
     font-size: .8rem;
 }
+
+.input-btn-container {
+    display: flex;
+    gap: 1rem;
+}
