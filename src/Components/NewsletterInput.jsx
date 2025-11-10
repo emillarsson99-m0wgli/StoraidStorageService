@@ -8,7 +8,7 @@ function NewsletterInput({  }) {
     const validateNewsletter = () => {
         const newNewsletterErrors = {}
             if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(newsletterData.email)) { //regex är ai genererad 
-                newNewsletterErrors.email = "Your email must be atleast 2 character long."
+                newNewsletterErrors.email = "Please enter a valid emailadress."
             }
         setNewsletterErrors(newNewsletterErrors)
         return Object.keys(newNewsletterErrors).length === 0;
@@ -33,7 +33,7 @@ function NewsletterInput({  }) {
 
   return (
     <form className="newsletter-form" onSubmit={handleSubmit} noValidate>
-        <input className="newsletter-input" type="text" name="email" placeholder="Enter your email" value={newsletterData.email} onChange={handleInputChange} required/>
+        <input className={`newsletter-input ${newsletterErrors.email ? "input-error" : ""}`} type="text" name="email" placeholder="Enter your email" value={newsletterData.email} onChange={handleInputChange} required/>
         {newsletterErrors.email && <span className="newsletter-error">{newsletterErrors.email}</span>}
         <button className="subscribe-btn" type="submit">Subscribe</button>
     </form>

@@ -10,6 +10,15 @@
   width: 400px;
 }
 
+.newsletter-input:focus {
+    outline: none;
+    border-color: #12372A;
+}
+
+.newsletter-input::placeholder {
+  color: #F1C30C;
+}
+
 .subscribe-btn {
   background-color: #F1C30C;
   color: #12372A;
@@ -24,4 +33,8 @@
     color: #fff;
     transition: 0.3s ease-in-out;
   }
+}
+
+.input-error {
+    border: 1px solid red;
 }
