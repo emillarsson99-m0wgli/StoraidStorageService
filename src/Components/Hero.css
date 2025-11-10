@@ -29,10 +29,17 @@
     }
 }
 
-.hero-button {
-    padding: 1rem 0;
-    
-    & Button {
-        font-weight: 600;
-    }
+.hero-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F1C30C;
+    color: #12372A;
+    border: 1px solid transparent;
+    min-width: 150px;
+    min-height: 50px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
 }
