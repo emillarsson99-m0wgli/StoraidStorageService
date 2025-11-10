@@ -63,3 +63,18 @@
     align-items: center;
     gap: 1rem;
 }
+
+.about-us-btn {
+background-color: #F1C30C;
+  color: #12372A;
+  border: 1px solid transparent;
+  width: 160px;
+  height: 45px;
+  border-radius: 5px;
+  font-weight: 700;
+
+  &:hover {
+    background-color: #12372A;
+    color: #fff;
+  }
+}
