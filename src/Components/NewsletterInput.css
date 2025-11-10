@@ -1,6 +1,11 @@
+.newsletter-container {
+    display: flex;
+    gap: 1rem;
+}
 .newsletter-form {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
   gap: .5rem;
 }
 .newsletter-input {
@@ -37,4 +42,10 @@
 
 .input-error {
     border: 1px solid red;
+}
+
+.newsletter-error {
+    flex-direction: column;
+    color: red;
+    font-size: .8rem;
 }
