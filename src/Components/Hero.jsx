@@ -15,7 +15,7 @@ function Hero() {
                     </div>
                 </div>
                 <div className="hero-image">
-                    <img src="/HeroFigure.svg" alt="Hero Figure" />
+                    <img src="/HeroFigure.svg" alt="Hero Figure" to="/NotFoundPage" />
                 </div>
             </div>
         </div>
