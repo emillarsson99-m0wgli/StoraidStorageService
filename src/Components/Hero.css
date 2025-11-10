@@ -13,19 +13,23 @@
     flex-direction: column;
     color: #fff;
     max-width: 735px;
+    padding: 1rem 0;
     
     & h4 {
         font-size: 1.5rem;
         color: #F1C30C;
+        padding: .5rem 0;
     }
 
     & h1 {
         font-size: 80px;
         font-weight: 800;
+        padding: .5rem 0;
     }
 
     & p {
         color: #fff;
+        padding: .5rem 0;
     }
 }
 
@@ -42,4 +46,9 @@
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;
+}
+
+.hero-button {
+    width: 150px;
+    padding-top: .5rem;
 }
