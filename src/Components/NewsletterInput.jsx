@@ -32,12 +32,14 @@ function NewsletterInput({  }) {
     }
 
   return (
-    <form className="newsletter-form" onSubmit={handleSubmit} noValidate>
-        <input className={`newsletter-input ${newsletterErrors.email ? "input-error" : ""}`} type="text" name="email" placeholder="Enter your email" value={newsletterData.email} onChange={handleInputChange} required/>
-        {newsletterErrors.email && <span className="newsletter-error">{newsletterErrors.email}</span>}
+    <div className="newsletter-container">
+        <form className="newsletter-form" onSubmit={handleSubmit} noValidate>
+            <input className={`newsletter-input ${newsletterErrors.email ? "input-error" : ""}`} type="text" name="email" placeholder="Enter your email" value={newsletterData.email} onChange={handleInputChange} required/>
+            {newsletterErrors.email && <span className="newsletter-error">{newsletterErrors.email}</span>}
+            
+        </form>
         <button className="subscribe-btn" type="submit">Subscribe</button>
-    </form>
-
+    </div>
     
   )
 }
