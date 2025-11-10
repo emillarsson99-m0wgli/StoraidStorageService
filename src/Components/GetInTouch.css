@@ -17,15 +17,12 @@
 .get-in-touch-headline h3 {
     color: #12372A;
     width: 650px;
+    font-size: 3rem;
 }
 
 .get-in-touch-headline p {
     color: #12372A;
     width: 650px;
-}
-
-.get-in-touch-headline h3 {
-    font-size: 3rem;
 }
 
 .get-in-touch-placeholder {
