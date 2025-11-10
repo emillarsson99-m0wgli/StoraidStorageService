@@ -26,6 +26,8 @@ import './Components/ContactForm.css'
 import './Components/FindUs.css'
 import './Components/PageNotFound.css'
 import './Components/StarRating.css'
+import './Components/NewsLetterInput.css'
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
