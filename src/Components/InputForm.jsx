@@ -3,13 +3,13 @@ function InputForm({ Text, shownText, placeholder, name, labelclassName, inputcl
 
     <div className={`input-form ${className}`}>
 
-      <form action="POST">
+      <div className="input-container">
         <label className={`label ${labelclassName}`}  htmlFor={Text} name={labelName} > {shownText} 
         
-          <input className={`input ${inputclassName}`} type="text" placeholder={placeholder} name={inputName} id={id} />
+          <span className={`input ${inputclassName}`} type="text" placeholder={placeholder} name={inputName} id={id} />
         
         </label>
-      </form>
+      </div>
 
     </div>
 
