@@ -26,7 +26,7 @@ function ContactForm() {
 
         if (validateNewsletter()) {
             console.log('form valid')
-            fetch('https://win25-jsf-assignment.azurewebsites.net/api/subscribe', {method: 'post', headers: { 'content-type': 'application/json' }, body: JSON.stringify(contactData)})
+            fetch('https://win25-jsf-assignment.azurewebsites.net/api/contact', {method: 'post', headers: { 'content-type': 'application/json' }, body: JSON.stringify(contactData)})
         }
         else {
             console.log('form invalid')
