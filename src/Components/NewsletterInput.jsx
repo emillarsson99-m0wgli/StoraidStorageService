@@ -2,40 +2,96 @@ import React, { useState } from 'react'
 
 function NewsletterInput({  }) {
 
-    const [newsletterData, setNewsletterData] = useState({ email: "" });
+    const [newsletterData, setNewsletterData] = useState({ email: '' });
     const [newsletterErrors, setNewsletterErrors] = useState({})
+    const [submitted, setSubmitted] = useState(false)
 
     const validateNewsletter = () => {
         const newNewsletterErrors = {}
             if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(newsletterData.email)) { //regex är ai genererad 
                 newNewsletterErrors.email = "Please enter a valid emailadress."
             }
-        setNewsletterErrors(newNewsletterErrors)
-        return Object.keys(newNewsletterErrors).length === 0;
+            
+            setNewsletterErrors(newNewsletterErrors)
+
+            return Object.keys(newNewsletterErrors).length === 0;
     }
 
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setNewsletterData({ ...newsletterData, [name]: value });
+    const handleChange = (e) => {
+        const { name, value } = e.target
+        setNewsletterData({...newsletterData, [name]: value})
+
+        if (value.trim() === '' ) {
+            setNewsletterErrors(prevNewsletterErrors => ({...prevNewsletterErrors, [name] : 'This field is required' }))
+        } else {
+            setNewsletterErrors(prevNewsletterErrors => ({...prevNewsletterErrors, [name] : '' }))
+        }
     }
+
+    const handleOk = () => {
+        setSubmitted(false)
+    }
+    
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if (validateNewsletter()) {
-            console.log('form valid')
-            fetch('https://win25-jsf-assignment.azurewebsites.net/api/subscribe', {method: 'post', headers: { 'content-type': 'application/json' }, body: JSON.stringify(newsletterData)})
-        }
-        else {
-            console.log('form invalid')
-        }
+            const newNewsletterErrors = {}
+            Object.keys(newsletterData).forEach(field => {
+                if (newsletterData[field].trim() === '') {
+                    newNewsletterErrors[field] = 'This field is required'
+                }
+            })
+            
+            if(Object.keys(newNewsletterErrors).length > 0) {
+                setNewsletterErrors(newNewsletterErrors)
+                return
+            }
+
+            if (!validateNewsletter()) {
+                console.log("Invalid email")
+                return;
+            }
+        
+            const res = await fetch('https://win25-jsf-assignment.azurewebsites.net/api/subscribe', {
+                method: 'post',
+                headers: {
+                    'content-type': 'application/json' 
+                }, 
+                body: JSON.stringify(newsletterData)
+            })
+
+            const data = await res.json()
+            console.log("Success:", data.success)
+            console.log("response:", data)
+            console.log("Status code:", res.status);
+
+            if (res.ok) {
+                setSubmitted(true)
+                setNewsletterData({ email: '' })
+            } 
+                
+
+    }        
+
+    
+    if (submitted) {
+        return(
+            <div className="newsletter-submitted">
+                <h2>Thank you for contacting us. </h2>
+                <p>We have received your message and will respond to you within 1-2 business days.</p>
+                <button className="newsletter-submitted-btn" onClick={handleOk}>Subscribe again!</button>
+            </div>
+        )
     }
+        
+    
 
   return (
     <div className="newsletter-container">
         <form className="newsletter-form" onSubmit={handleSubmit} noValidate>
             <div className="input-btn-container">
-                <input className={`newsletter-input ${newsletterErrors.email ? "input-error" : ""}`} type="text" name="email" placeholder="Enter your email" value={newsletterData.email} onChange={handleInputChange} required/>
+                <input className={`newsletter-input ${newsletterErrors.email ? "input-error" : ""}`} type="text" name="email" placeholder="Enter your email" value={newsletterData.email} onChange={handleChange} required/>
                 <button className="subscribe-btn" type="submit">Subscribe</button>
             </div>
             <div className="error-message">

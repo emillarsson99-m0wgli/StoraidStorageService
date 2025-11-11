@@ -44,6 +44,10 @@
     border: 1px solid red;
 }
 
+.input-error::placeholder {
+  color: red;
+}
+
 .newsletter-error {
     flex-direction: column;
     color: red;
@@ -53,4 +57,24 @@
 .input-btn-container {
     display: flex;
     gap: 1rem;
+}
+
+.newsletter-submitted {
+  color: #12372A;
+}
+
+.newsletter-submitted-btn {
+  background-color: #F1C30C;
+  color: #12372A;
+  border: 1px solid transparent;
+  width: 130px;
+  height: 45px;
+  border-radius: 5px;
+  font-weight: 700;
+
+  &:hover {
+    background-color: #12372A;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+  }
 }
