@@ -79,8 +79,7 @@ function NewsletterInput({  }) {
         return(
             <div className="newsletter-submitted">
                 <div className="newsletter-submitted-text">
-                    <h2>Thank you for contacting us. </h2>
-                    <p>We have received your message and will respond to you within 1-2 business days.</p>
+                    <h2>Thank you for subscribing to our newsletter! </h2>
                 </div>
                 <button className="newsletter-submitted-btn" onClick={handleOk}>Subscribe again!</button>
             </div>
