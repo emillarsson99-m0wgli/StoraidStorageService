@@ -1,5 +1,6 @@
 import React from 'react'
 import TitleCard from '../Components/TitleCard'
+import ContactForm from '../Components/ContactForm'
 import GetInTouch from '../Components/GetInTouch'
 import FindUs from '../Components/FindUs'
 
