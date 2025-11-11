@@ -61,6 +61,11 @@
 
 .newsletter-submitted {
   color: #12372A;
+  
+}
+
+.newsletter-submitted-text {
+  padding-bottom: 1rem;
 }
 
 .newsletter-submitted-btn {
