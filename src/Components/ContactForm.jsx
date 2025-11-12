@@ -1,5 +1,3 @@
-import InputForm from "./InputForm"
-import Button from "./Button"
 import { useState } from 'react'
 
 function ContactForm() {
@@ -152,7 +150,7 @@ function ContactForm() {
             {contactErrors.comment && <span className="contact-error">{contactErrors.comment}</span>}    
         </div>
         <div className="form-button">
-            <Button Text="Submit" className="form-btn"/>
+            <button className="form-btn">Submit</button>
         </div>
     </form>
   )
