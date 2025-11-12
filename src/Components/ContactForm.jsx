@@ -15,11 +15,10 @@ function ContactForm() {
     const [contactErrors, setContactErrors] = useState({})
     const [submitted, setSubmitted] = useState(false)
 
+
     const validateContactForm = () => {
         const newContactErrors = {}
-            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contactData.email)) { //regex är ai genererad 
-                newContactErrors.email = "Please enter a valid emailadress."
-            }
+            
         setContactErrors(newContactErrors)
         return Object.keys(newContactErrors).length === 0;
     }
@@ -28,12 +27,30 @@ function ContactForm() {
         const { name, value } = e.target
         setContactData({...contactData, [name]: value})
 
+        let error = ''
+
         if (value.trim() === '' ) {
-            setContactErrors(prevContactErrors => ({...prevContactErrors, [name] : 'This field is required' }))
+            error = 'This field is required'
         } else {
-            setContactErrors(prevContactErrors => ({...prevContactErrors, [name] : '' }))
+            if (name === 'name' && !/^[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,50}$/.test(value)) {
+                error = "Please enter a valid name."
+            }
+
+            if (name === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+                error = "Please enter a valid email."
+            }
+
+            if (name === 'subject' && !/^[A-Za-z0-9À-ÖØ-öø-ÿ.,!?'"()\- ]{3,100}$/.test(value)) {
+                error = "Please enter a valid subject."
+            }
+
+            if (name === 'comment' && !/^[A-Za-z0-9\s.,!?;:'"\-(){}\[\]@#$%^&*\/\\]+$/.test(value)) {
+                error = "Please enter a valid subject."
+            }
         }
-    }
+
+        setContactErrors(prevContactErrors => ({ ...prevContactErrors, [name]: error}))
+    };
 
     const handleOk = () => {
         setSubmitted(false)
@@ -42,40 +59,45 @@ function ContactForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-            const newContactErrors = {}
-            Object.keys(contactData).forEach(field => {
-                if (contactData[field].trim() === '') {
-                    newContactErrors[field] = 'This field is required'
-                }
-            })
-            
-            if(Object.keys(newContactErrors).length > 0) {
-                setContactErrors(newContactErrors)
-                return
+        const requiredFields = ['name', 'email', 'subject', 'comment']; // Har tagit hjälp av ai för att kunna submitta formuläret utan att "telephone" är ifyllt. 
+    
+        const newContactErrors = {}
+        requiredFields.forEach(field => {
+            if (contactData[field].trim() === '') {
+                newContactErrors[field] = 'This field is required'
             }
-
-            if (!validateContactForm()) {
-                console.log("Invalid email")
-                return;
-            }
+        })
         
-            const res = await fetch('https://win25-jsf-assignment.azurewebsites.net/api/contact', {
-                method: 'post',
-                headers: {
-                    'content-type': 'application/json' 
-                }, 
-                body: JSON.stringify(contactData)
-            })
-
-            const data = await res.json()
-            console.log("Success:", data.success)
-            console.log("response:", data)
-            console.log("Status code:", res.status);
-
-            if (res.ok) {
-                setSubmitted(true)
-                setContactData({ email: '' })
-            } 
+        if(Object.keys(newContactErrors).length > 0) {
+            setContactErrors(newContactErrors)
+            return
+        }
+        if (!validateContactForm()) {
+            console.log("Invalid email")
+            return;
+        }
+    
+        const res = await fetch('https://win25-jsf-assignment.azurewebsites.net/api/contact', {
+            method: 'post',
+            headers: {
+                'content-type': 'application/json' 
+            }, 
+            body: JSON.stringify(contactData)
+        })
+        const data = await res.json()
+        console.log(contactData)
+        console.log("Response:", data)
+        console.log("Status code:", res.status);
+        if (res.ok) {
+            setSubmitted(true)
+            setContactData({ 
+                name: '',
+                email: '',
+                telephone: '',
+                subject: '',
+                comment: ''
+              });
+        } 
     }
 
     if (submitted) {
@@ -95,23 +117,23 @@ function ContactForm() {
 
     <form className="contact-form-container" onSubmit={handleSubmit} noValidate>
         <div className="input-group">
-            <p>Your Name</p>
-            <input className="contact-input" id="name"  type="text" name="name" placeholder="Name" value={contactData.name} onChange={handleChange} required />
+            <p className={`contact-input-p ${contactErrors.name ? "contact-input-error-p" : ""}`}>Your Name <span className="red-star">*</span></p>
+            <input className={`contact-input ${contactErrors.name ? "contact-input-error" : ""}`} id="name"  type="text" name="name" placeholder="Name" value={contactData.name} onChange={handleChange} required />
             {contactErrors.name && <span className="contact-error">{contactErrors.name}</span>}
         </div>
 
         <div className="input-group">
             <div className="contact-row-form">
                 <div className="contact-row">
-                    <p>Email</p>
-                    <input className="contact-input" id="email"  type="text" name="email" placeholder="Email" value={contactData.email} onChange={handleChange} required />
+                    <p className={`contact-input-p ${contactErrors.email ? "contact-input-error-p" : ""}`}>Email <span className="red-star">*</span></p>
+                    <input className={`contact-input ${contactErrors.email ? "contact-input-error" : ""}`} id="email"  type="text" name="email" placeholder="Email" value={contactData.email} onChange={handleChange} required />
                     {contactErrors.email && <span className="contact-error">{contactErrors.email}</span>}
                 </div>
 
                 <div className="contact-row">
                     <p>Telephone</p>
-                    <input className="contact-input" id="telephone"  type="text" name="telephone" placeholder="Telephone" value={contactData.telephone} onChange={handleChange}/>
-                    {contactErrors.telephone && <span className="contact-error">{contactErrors.telephone}</span>}
+                    <input className={`contact-input ${contactErrors.telephone ? "" : ""}`} id="telephone"  type="text" name="telephone" placeholder="Telephone" value={contactData.telephone} onChange={handleChange}/>
+                    {/* {contactErrors.telephone && <span className="contact-error">{contactErrors.telephone}</span>} */}
                 </div>
             </div>
         </div>
@@ -119,14 +141,14 @@ function ContactForm() {
         
 
         <div className="input-group">
-            <p>Subject</p>
-            <input className="contact-input" id="subject"  type="text" name="subject" placeholder="Subject" value={contactData.subject} onChange={handleChange} required />
+            <p className={`contact-input-p ${contactErrors.subject ? "contact-input-error-p" : ""}`}>Subject <span className="red-star">*</span></p>
+            <input className={`contact-input ${contactErrors.subject ? "contact-input-error" : ""}`} id="subject"  type="text" name="subject" placeholder="Subject" value={contactData.subject} onChange={handleChange} required />
             {contactErrors.subject && <span className="contact-error">{contactErrors.subject}</span>}
         </div>
 
         <div className="input-group">
-            <p>Comments / Questions</p>
-            <textarea className="contact-input" name="comment" placeholder="Comments" id="comments" value={contactData.comment} onChange={handleChange} required></textarea>
+            <p className={`contact-input-p ${contactErrors.comment ? "contact-input-error-p" : ""}`}>Comments / Questions <span className="red-star">*</span></p>
+            <textarea className={`contact-input ${contactErrors.comment ? "contact-input-error" : ""}`} name="comment" placeholder="Comments" id="comments" value={contactData.comment} onChange={handleChange} required></textarea>
             {contactErrors.comment && <span className="contact-error">{contactErrors.comment}</span>}    
         </div>
         <div className="form-button">

@@ -108,6 +108,28 @@
   }
 }
 
+.contact-input-error {
+    border: 1px solid red;
+}
+
+.contact-input-error::placeholder {
+  color: red;
+}
+
+.contact-error {
+    flex-direction: column;
+    color: red;
+    font-size: .7rem;
+}
+
+.contact-input-error-p {
+    color: red;
+}
+
+.red-star {
+    color: red;
+}
+
 
 
 
