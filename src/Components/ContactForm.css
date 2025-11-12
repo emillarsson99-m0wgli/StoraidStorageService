@@ -142,6 +142,11 @@
     color: red;
 }
 
+#comments.contact-input-error {
+    border: 1px solid red;
+}
+
+
 
 
 
