@@ -42,8 +42,8 @@ function ContactForm() {
                 error = "Please enter a valid subject."
             }
 
-            if (name === 'comment' && !/^[A-Za-z0-9\s.,!?;:'"\-(){}\[\]@#$%^&*\/\\]+$/.test(value)) {
-                error = "Please enter a valid subject."
+            if (name === 'comment' && !/^[A-Za-z0-9\s.,!?;:'"\-(){}\[\]@#$%^&*\/\\]{2,200}$/.test(value)) {
+                error = "Please enter a valid comment."
             }
         }
 
