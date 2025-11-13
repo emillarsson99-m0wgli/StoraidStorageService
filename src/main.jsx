@@ -28,6 +28,7 @@ import './Components/PageNotFound.css'
 import './Components/StarRating.css'
 import './Components/NewsLetterInput.css'
 import './Components/BookingForm.css'
+import './Components/BookingSection.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

@@ -1,0 +1,35 @@
+.booking-section-container {
+    display: flex;
+    gap: 5rem;
+    width: 100%;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5rem 1rem;
+}
+
+.booking-headline h4 {
+    color: #F1C30C;
+    font-size: 1.5rem;
+}
+
+.booking-headline h3 {
+    color: #12372A;
+    width: 650px;
+    font-size: 3rem;
+}
+
+.booking-section-form p {
+    color: #12372A;
+    padding-bottom: 1rem;
+}
+
+.booking-fox {
+    width: 673px;
+    height: 545px;
+    padding-top: 1rem;
+}
+
+.booking-section-form {
+    padding-top: 6rem;
+}
