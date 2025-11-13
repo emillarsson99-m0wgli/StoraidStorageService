@@ -47,12 +47,12 @@
   }
 }
 
-#email {
+#bookingEmail {
     width: 278px;
     height: 60px;
 }
 
-#name  {
+#bookingName  {
     width: 278px;
     height: 60px;
 }
@@ -63,7 +63,7 @@
     border: #F1C30C;
 } */
 
-#purpose {
+#bookingPurpose {
     width: 590px;
     border: 1px solid #F1C30C;
     border-radius: 5px;

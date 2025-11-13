@@ -114,13 +114,13 @@ function BookingForm() {
                 <div className="booking-row-form">
                     <div className="booking-row">
                         <p className={`booking-input-p ${bookingErrors.name ? "booking-input-error-p" : ""}`}>Your Name <span className="red-star">*</span></p>
-                        <input className={`booking-input ${bookingErrors.name ? "booking-input-error" : ""}`} id="name"  type="text" name="name" placeholder="name" value={bookingData.name} onChange={handleChange} required />
+                        <input className={`booking-input ${bookingErrors.name ? "booking-input-error" : ""}`} id="bookingName"  type="text" name="name" placeholder="Name" value={bookingData.name} onChange={handleChange} required />
                         {bookingErrors.name && <span className="booking-error">{bookingErrors.name}</span>}
                     </div>
 
                     <div className="booking-row">
                         <p className={`booking-input-p ${bookingErrors.email ? "booking-input-error-p" : ""}`}>Email <span className="red-star">*</span></p>
-                        <input className={`booking-input ${bookingErrors.email ? "booking-input-error" : ""}`} id="email"  type="text" name="email" placeholder="email" value={bookingData.email} onChange={handleChange}/>
+                        <input className={`booking-input ${bookingErrors.email ? "booking-input-error" : ""}`} id="bookingEmail"  type="text" name="email" placeholder="Email" value={bookingData.email} onChange={handleChange}/>
                         {bookingErrors.email && <span className="booking-error">{bookingErrors.email}</span>}
                     </div>
                 </div>
@@ -135,7 +135,7 @@ function BookingForm() {
 
             <div className="booking-group">
                 <p className={`booking-input-p ${bookingErrors.purpose ? "booking-input-error-p" : ""}`}>purpose <span className="red-star">*</span></p>
-                <textarea className={`booking-input ${bookingErrors.purpose ? "booking-input-error" : ""}`} name="purpose" placeholder="purpose" id="purpose" value={bookingData.purpose} onChange={handleChange} required></textarea>
+                <textarea className={`booking-input ${bookingErrors.purpose ? "booking-input-error" : ""}`} name="purpose" placeholder="Purpose" id="bookingPurpose" value={bookingData.purpose} onChange={handleChange} required></textarea>
                 {bookingErrors.purpose && <span className="booking-error">{bookingErrors.purpose}</span>}    
             </div>
             <div className="bookingform-button">

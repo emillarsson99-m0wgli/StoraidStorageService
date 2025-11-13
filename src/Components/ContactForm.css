@@ -54,23 +54,27 @@
   }
 }
 
-#email {
+#contactEmail {
     width: 278px;
+    height: 60px;
 }
 
-#telephone {
+#contactTelephone {
     width: 278px;
+    height: 60px;
 }
 
-#name  {
+#contactName  {
     width: 590px;
+    height: 60px;
 }
 
-#subject {
+#contactSubject {
     width: 590px;
+    height: 60px;  
 }
 
-#comments {
+#contactComments {
     width: 590px;
     border: 1px solid #F1C30C;
     border-radius: 5px;
@@ -135,14 +139,14 @@
 }
 
 .contact-input-error-p {
-    color: red;
+    color: red !important;
 }
 
 .red-star {
     color: red;
 }
 
-#comments.contact-input-error {
+#contactComments.contact-input-error {
     border: 1px solid red;
 }
 

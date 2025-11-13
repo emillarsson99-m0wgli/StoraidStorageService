@@ -116,7 +116,7 @@ function ContactForm() {
     <form className="contact-form-container" onSubmit={handleSubmit} noValidate>
         <div className="input-group">
             <p className={`contact-input-p ${contactErrors.name ? "contact-input-error-p" : ""}`}>Your Name <span className="red-star">*</span></p>
-            <input className={`contact-input ${contactErrors.name ? "contact-input-error" : ""}`} id="name"  type="text" name="name" placeholder="Name" value={contactData.name} onChange={handleChange} required />
+            <input className={`contact-input ${contactErrors.name ? "contact-input-error" : ""}`} id="contactName"  type="text" name="name" placeholder="Name" value={contactData.name} onChange={handleChange} required />
             {contactErrors.name && <span className="contact-error">{contactErrors.name}</span>}
         </div>
 
@@ -124,13 +124,13 @@ function ContactForm() {
             <div className="contact-row-form">
                 <div className="contact-row">
                     <p className={`contact-input-p ${contactErrors.email ? "contact-input-error-p" : ""}`}>Email <span className="red-star">*</span></p>
-                    <input className={`contact-input ${contactErrors.email ? "contact-input-error" : ""}`} id="email"  type="text" name="email" placeholder="Email" value={contactData.email} onChange={handleChange} required />
+                    <input className={`contact-input ${contactErrors.email ? "contact-input-error" : ""}`} id="contactEmail"  type="text" name="email" placeholder="Email" value={contactData.email} onChange={handleChange} required />
                     {contactErrors.email && <span className="contact-error">{contactErrors.email}</span>}
                 </div>
 
                 <div className="contact-row">
                     <p>Telephone</p>
-                    <input className={`contact-input ${contactErrors.telephone ? "" : ""}`} id="telephone"  type="text" name="telephone" placeholder="Telephone" value={contactData.telephone} onChange={handleChange}/>
+                    <input className={`contact-input ${contactErrors.telephone ? "" : ""}`} id="contactTelephone"  type="text" name="telephone" placeholder="Telephone" value={contactData.telephone} onChange={handleChange}/>
                     {/* {contactErrors.telephone && <span className="contact-error">{contactErrors.telephone}</span>} */}
                 </div>
             </div>
@@ -140,13 +140,13 @@ function ContactForm() {
 
         <div className="input-group">
             <p className={`contact-input-p ${contactErrors.subject ? "contact-input-error-p" : ""}`}>Subject <span className="red-star">*</span></p>
-            <input className={`contact-input ${contactErrors.subject ? "contact-input-error" : ""}`} id="subject"  type="text" name="subject" placeholder="Subject" value={contactData.subject} onChange={handleChange} required />
+            <input className={`contact-input ${contactErrors.subject ? "contact-input-error" : ""}`} id="contactSubject"  type="text" name="subject" placeholder="Subject" value={contactData.subject} onChange={handleChange} required />
             {contactErrors.subject && <span className="contact-error">{contactErrors.subject}</span>}
         </div>
 
         <div className="input-group">
             <p className={`contact-input-p ${contactErrors.comment ? "contact-input-error-p" : ""}`}>Comments / Questions <span className="red-star">*</span></p>
-            <textarea className={`contact-input ${contactErrors.comment ? "contact-input-error" : ""}`} name="comment" placeholder="Comments" id="comments" value={contactData.comment} onChange={handleChange} required></textarea>
+            <textarea className={`contact-input ${contactErrors.comment ? "contact-input-error" : ""}`} name="comment" placeholder="Comments" id="contactComments" value={contactData.comment} onChange={handleChange} required></textarea>
             {contactErrors.comment && <span className="contact-error">{contactErrors.comment}</span>}    
         </div>
         <div className="form-button">
