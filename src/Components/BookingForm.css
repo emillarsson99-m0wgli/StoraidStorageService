@@ -1,0 +1,159 @@
+.booking-form-container {
+    background-color: #FAF8EC;
+    width: 666px;
+    height: 640px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+    padding: 2rem;
+    gap: 1rem; 
+}
+
+.booking-group {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    gap: 0.5rem; 
+}
+
+.booking-row-form {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem; 
+    width: 100%;
+}
+
+.booking-row {
+    display: flex;
+    flex-direction: column; 
+    gap: 0.5rem; 
+}
+
+.bookingform-btn {
+    background-color: #F1C30C;
+    color: #12372A;
+    border: 1px solid transparent;
+    width: 130px;
+    height: 45px;
+    border-radius: 5px;
+    font-weight: 600;
+
+    &:hover {
+        background-color: #12372A;
+        color: #fff;
+        transition: 0.3s ease-in-out;
+  }
+}
+
+#email {
+    width: 278px;
+    height: 60px;
+}
+
+#name  {
+    width: 278px;
+    height: 60px;
+}
+
+/* #customSelect {
+    width: 590px;
+    height: 60px;
+    border: #F1C30C;
+} */
+
+#purpose {
+    width: 590px;
+    border: 1px solid #F1C30C;
+    border-radius: 5px;
+    padding: .8rem;
+    height: 150px;
+    resize: none;
+}
+
+.unit-select {
+    width: 590px;
+    border: 1px solid #F1C30C;
+    border-radius: 5px;
+    padding: .8rem;
+    height: 60px;
+    resize: none;
+    appearance: none;
+}
+
+.booking-input {
+  border: 1px solid #F1C30C;
+  border-radius: 5px;
+  padding: .8rem;
+  width: 400px;
+}
+
+
+.bookingform-submitted {
+    background-color: #FAF8EC;
+    width: 666px;
+    height: 640px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 1rem; 
+    border-radius: 5px;
+}
+.bookingform-submitted-text {
+    color: #12372A;
+}
+
+.bookingform-submitted-btn {
+    background-color: #F1C30C;
+    color: #12372A;
+    border: 1px solid transparent;
+    width: 130px;
+    height: 45px;
+    border-radius: 5px;
+    font-weight: 700;
+
+    &:hover {
+        background-color: #12372A;
+        color: #fff;
+        transition: 0.3s ease-in-out;
+  }
+}
+
+.booking-input-error {
+    border: 1px solid red;
+}
+
+.booking-input-error::placeholder {
+  color: red;
+}
+
+.booking-error {
+    flex-direction: column;
+    color: red;
+    font-size: .7rem;
+}
+
+.booking-input-error-p {
+    color: red;
+}
+
+.red-star {
+    color: red;
+}
+
+#purpose.booking-input-error {
+    border: 1px solid red;
+}
+
+.booking-select-error {
+    border: 1px solid red;
+    color: red;
+}
+
+
+
+
