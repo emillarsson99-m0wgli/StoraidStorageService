@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 function NewsletterInput({  }) {
 
+    const [responseMessage, setResponseMessage] = useState('')
     const [newsletterData, setNewsletterData] = useState({ email: '' });
     const [newsletterErrors, setNewsletterErrors] = useState({})
     const [submitted, setSubmitted] = useState(false)
@@ -62,13 +63,13 @@ function NewsletterInput({  }) {
             })
 
             const data = await res.json()
-            console.log("Success:", data.success)
             console.log("response:", data)
             console.log("Status code:", res.status);
 
             if (res.ok) {
                 setSubmitted(true)
                 setNewsletterData({ email: '' })
+                setResponseMessage(data.message)
             } 
                 
 
@@ -79,7 +80,7 @@ function NewsletterInput({  }) {
         return(
             <div className="newsletter-submitted">
                 <div className="newsletter-submitted-text">
-                    <h2>Thank you for subscribing to our newsletter! </h2>
+                    <h2>{responseMessage}</h2>
                 </div>
                 <button className="newsletter-submitted-btn" onClick={handleOk}>Return</button>
             </div>
