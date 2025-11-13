@@ -145,7 +145,7 @@
     color: red;
 }
 
-#purpose.booking-input-error {
+#bookingPurpose.booking-input-error {
     border: 1px solid red;
 }
 
