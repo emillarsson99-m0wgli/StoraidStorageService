@@ -7,7 +7,21 @@ function AboutUs() {
         <div className="about-us-container">
 
             <div className="about-us-experience">
-                <img src="/AboutUsExperience.svg" alt="Facebook" id="FBICON" />
+                <div className="about-us-placeholder"></div>
+                <div className="about-us-experience-container">
+                    <div>
+                        <h2>12+</h2>
+                        <p>Years of Experience</p>
+                    </div>
+                    <div>
+                        <h2>150K+</h2>
+                        <p>Satisfied Clients</p>
+                    </div>
+                    <div>
+                        <h2>35+</h2>
+                        <p>Warehouse</p>
+                    </div>
+                </div>
             </div>
 
             <div className="about-us-right">
