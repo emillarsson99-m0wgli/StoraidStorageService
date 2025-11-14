@@ -48,7 +48,6 @@ function WhyChooseUs({ className }) {
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl sed dui lacinia gravida. Nulla quis nulla leo. Mauris ac blandit nisi non sodales augue. Phasellus eget elit gravida.</p>
                     </div>
                     <div className="wcu-placeholder">
-                        <img src="/placeholder.svg" alt="" />
                     </div>
                 </div>
             </div>
