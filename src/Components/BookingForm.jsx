@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import SubmitButton from './SubmitButton'
 
 
 function BookingForm() {
@@ -59,6 +60,7 @@ function BookingForm() {
         requiredFields.forEach(field => {
             if(bookingData[field].trim() === '') {
                 newBookingErrors[field] = 'This field is required'
+                console.log("The required fields need to be filled")
             }
         }) 
 
@@ -67,7 +69,7 @@ function BookingForm() {
             return
         }
         if (!validateBookingForm()) {
-            console.log("nice try")
+    
             return;
         }
 
@@ -139,7 +141,7 @@ function BookingForm() {
                 {bookingErrors.purpose && <span className="booking-error">{bookingErrors.purpose}</span>}    
             </div>
             <div className="bookingform-button">
-                <button className="form-btn">Submit</button>
+                <SubmitButton className="form-btn" text="Submit" />
             </div>
         </form>
     </div>
