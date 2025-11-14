@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import SubmitButton from './SubmitButton'
 
 function NewsletterInput({  }) {
 
@@ -94,7 +95,7 @@ function NewsletterInput({  }) {
         <form className="newsletter-form" onSubmit={handleSubmit} noValidate>
             <div className="input-btn-container">
                 <input className={`newsletter-input ${newsletterErrors.email ? "input-error" : ""}`} type="text" name="email" placeholder="Enter your email" value={newsletterData.email} onChange={handleChange} required/>
-                <button className="subscribe-btn" type="submit">Subscribe</button>
+                <SubmitButton className="subscribe-btn" text="Subscribe" />
             </div>
             <div className="error-message">
             {newsletterErrors.email && <span className="newsletter-error">{newsletterErrors.email}</span>}
