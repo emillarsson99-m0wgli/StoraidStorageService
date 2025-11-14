@@ -92,3 +92,35 @@ background-color: #F1C30C;
     color: #fff;
   }
 }
+
+.about-us-placeholder {
+    background-color: #c7c7c7;
+    border: 4px solid gainsboro;
+    height: 441px;
+    width: 673px;
+    
+}
+
+.about-us-experience-container {
+    background-color: #12372A;
+    color: #F1C30C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    bottom: 50px;
+    left: 25px;
+    height: 150px;
+    width: 615px;
+    border-radius: 10px;
+    gap: 2rem;
+}
+
+.about-us-experience-container p {
+    color: #fff;
+}
+
+.about-us-experience-container h2 {
+    font-size: 4rem;
+}
