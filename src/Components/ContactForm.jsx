@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import SubmitButton from './SubmitButton'
 
 function ContactForm() {
 
@@ -63,6 +64,7 @@ function ContactForm() {
         requiredFields.forEach(field => {
             if (contactData[field].trim() === '') {
                 newContactErrors[field] = 'This field is required'
+                console.log("The required fields need to be filled")
             }
         })
         
@@ -150,7 +152,7 @@ function ContactForm() {
             {contactErrors.comment && <span className="contact-error">{contactErrors.comment}</span>}    
         </div>
         <div className="form-button">
-            <button className="form-btn">Submit</button>
+            <SubmitButton className="form-btn" text="Submit" />
         </div>
     </form>
   )
