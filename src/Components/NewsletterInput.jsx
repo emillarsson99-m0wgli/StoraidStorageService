@@ -83,7 +83,7 @@ function NewsletterInput({  }) {
                 <div className="newsletter-submitted-text">
                     <h2>{responseMessage}</h2>
                 </div>
-                <button className="newsletter-submitted-btn" onClick={handleOk}>Return</button>
+                <button className="newsletter-submitted-btn" onClick={handleOk} >Return</button>
             </div>
         )
     }
