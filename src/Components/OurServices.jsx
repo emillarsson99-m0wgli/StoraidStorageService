@@ -20,7 +20,7 @@ function OurServices() {
                 </div>
 
                 <div className="our-services-middle-container">
-                    <h3>Image</h3>
+                    <h3></h3>
                 </div>
 
                 <div className="our-services-right-container">

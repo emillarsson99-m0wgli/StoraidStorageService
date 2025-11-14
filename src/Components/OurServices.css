@@ -15,17 +15,21 @@
 .our-services-top {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
     padding-bottom: .5rem;
 
     & h2 {
         font-size: 3rem;
         color: #12372A;
         font-weight: 700;
+        width: 620px;
     }
 
     & p {
         color: #12372A;
         padding-top: .8rem;
+        width: 690px;
     }
 }
 
@@ -37,7 +41,8 @@
 }
 
 .our-services-middle-container {
-    border: 2px solid #ECECEC;
+    background-color: #c7c7c7;
+    border: 4px solid gainsboro;
     width: 520px;
     height: 330px;
 }
