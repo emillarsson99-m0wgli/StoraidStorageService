@@ -97,3 +97,11 @@ a:visited {
 .header-btn:visited, .header-btn:link {
   color: #12372A;
 }
+
+.navlink-btn.active {
+  color: #F1C30C;
+}
+
+.navlink-btn {
+  color: #12372A;
+}

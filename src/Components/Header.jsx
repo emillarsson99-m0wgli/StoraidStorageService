@@ -1,7 +1,10 @@
 import { NavLink } from "react-router-dom"
+import { useState } from 'react'
 import Button from "./Button"
 
 function Header() {
+
+    const [isActive, setIsActive] = useState()
 
     return(
         <div className="container">
@@ -41,10 +44,10 @@ function Header() {
             <div className="header-main">
                 <img src="/StoraidIcon.svg" alt="Storaid" />
                 <nav className="header-nav">
-                    <NavLink to="/">Home</NavLink>
-                    <NavLink to="/AboutUsPage">About Us</NavLink>
-                    <NavLink to="/ServicePage">Services</NavLink>
-                    <NavLink to="/ContactPage">Contact Us</NavLink>
+                    <NavLink to="/" className={({ isActive }) => isActive ? "navlink-btn active" : "navlink-btn" }>Home</NavLink>
+                    <NavLink to="/AboutUsPage" className={({ isActive }) => isActive ? "navlink-btn active" : "navlink-btn" }>About Us</NavLink>
+                    <NavLink to="/ServicePage" className={({ isActive }) => isActive ? "navlink-btn active" : "navlink-btn" }>Services</NavLink>
+                    <NavLink to="/ContactPage" className={({ isActive }) => isActive ? "navlink-btn active" : "navlink-btn" }>Contact Us</NavLink>
                 </nav>
                 <Button Text="Book Now" className="header-btn" to="/BookingPage"/>
             </div>
