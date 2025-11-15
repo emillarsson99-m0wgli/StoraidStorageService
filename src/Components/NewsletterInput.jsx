@@ -94,7 +94,7 @@ function NewsletterInput({  }) {
     <div className="newsletter-container">
         <form className="newsletter-form" onSubmit={handleSubmit} noValidate>
             <div className="input-btn-container">
-                <input className={`newsletter-input ${newsletterErrors.email ? "input-error" : ""}`} type="text" name="email" placeholder="Enter your email" value={newsletterData.email} onChange={handleChange} required/>
+                <input className={`newsletter-input ${newsletterErrors.email ? "input-error" : ""}`} type="text" name="email" placeholder="Enter your email *" value={newsletterData.email} onChange={handleChange} required/>
                 <SubmitButton className="subscribe-btn" text="Subscribe" />
             </div>
             <div className="error-message">
