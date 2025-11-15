@@ -25,3 +25,24 @@
         padding-bottom: 1rem;
     }
 }
+
+.booking-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F1C30C;
+    color: #12372A;
+    border: 1px solid transparent;
+    min-width: 100px;
+    min-height: 50px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #12372A;
+        color: #fff;
+        transition: 0.3s ease-in-out;
+  }
+}
